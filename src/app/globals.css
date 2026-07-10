@@ -1,15 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Mono:wght@400&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --radius: .75rem;
+    --background: oklch(98.5% .012 85);
+    --foreground: oklch(22% .03 220);
+    --card: oklch(100% 0 0);
+    --card-foreground: oklch(22% .03 220);
+    --popover: oklch(100% 0 0);
+    --popover-foreground: oklch(22% .03 220);
+    --primary: oklch(38% .055 200);
+    --primary-foreground: oklch(98.5% .012 85);
+    --secondary: oklch(94% .02 80);
+    --secondary-foreground: oklch(28% .04 220);
+    --muted: oklch(94% .015 80);
+    --muted-foreground: oklch(48% .02 220);
+    --accent: oklch(66% .14 45);
+    --accent-foreground: oklch(99% .01 80);
+    --destructive: oklch(55% .22 27);
+    --destructive-foreground: oklch(99% 0 0);
+    --border: oklch(88% .02 80);
+    --input: oklch(90% .015 80);
+    --ring: oklch(38% .055 200);
+    --chart-1: oklch(64.6% .222 41.116);
+    --chart-2: oklch(60% .118 184.704);
+    --chart-3: oklch(39.8% .07 227.392);
+    --chart-4: oklch(82.8% .189 84.429);
+    --chart-5: oklch(76.9% .188 70.08);
+    --sidebar: oklch(98.5% .012 85);
+    --sidebar-foreground: oklch(22% .03 220);
+    --sidebar-primary: oklch(38% .055 200);
+    --sidebar-primary-foreground: oklch(99% 0 0);
+    --sidebar-accent: oklch(94% .02 80);
+    --sidebar-accent-foreground: oklch(22% .03 220);
+    --sidebar-border: oklch(88% .02 80);
+    --sidebar-ring: oklch(38% .055 200);
+    --shadow-card: 0 1px 2px oklch(22% .03 220 / .04), 0 8px 24px oklch(22% .03 220 / .06);
+    --gradient-hero: linear-gradient(180deg, oklch(22% .03 220 / 0) 0%, oklch(22% .03 220 / .55) 55%, oklch(22% .03 220 / .85) 100%);
 }
+
+
+
+@utility font-libertinus {
+  font-family: "Libertinus Mono", monospace;
+}
+
+
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary : var(--primary);
+  --color-muted: var(--muted);
+
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
 }
 
 @media (prefers-color-scheme: dark) {

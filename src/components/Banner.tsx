@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { BsStars } from "react-icons/bs";
 import { FiPlayCircle } from "react-icons/fi";
 import { LuArrowRight } from "react-icons/lu";
+import { RiArrowDownWideLine } from "react-icons/ri";
 
 const container = {
   hidden: {},
@@ -117,6 +118,24 @@ const Banner = () => {
           </motion.div>
         </motion.div>
       </div>
+      {/* Moving arrow */}
+
+
+
+      <div className="container mx-auto p-6 flex justify-center items-center h-10 text-3xl">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <RiArrowDownWideLine />
+        </motion.div>
+      </div>
+
+
     </div>
   );
 };

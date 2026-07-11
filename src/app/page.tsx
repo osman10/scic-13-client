@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Featured from "@/components/Featured";
 import TravelStats from "@/components/TravelStats";
 
 
@@ -7,6 +8,7 @@ const page = () => {
     <div>
       <Banner />
       <TravelStats/>
+      <Featured/>
     </div>
   );
 };

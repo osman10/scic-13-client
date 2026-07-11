@@ -62,7 +62,6 @@ const TravelStats = () => {
           ))}
         </div>
       </div>
-      <div className="h-screen"></div>
     </section>
   );
 };

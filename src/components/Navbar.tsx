@@ -7,6 +7,7 @@ import { GiMountainCave } from "react-icons/gi";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 import { LuLogOut } from "react-icons/lu";
+import { FaCompass } from "react-icons/fa6";
 
 const menuItems = [
     { label: "Home", href: "/" },
@@ -45,15 +46,15 @@ const Navbar = () => {
                     : "bg-transparent"
                 }`}
         >
-            <nav className="relative flex items-center justify-between px-6 py-5">
+            <nav className="relative flex items-center justify-between px-6 py-5 bg-white/40">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="rounded-full border border-[var(--accent)] p-1 text-2xl text-[var(--accent)]">
-                        <GiMountainCave />
+                    <div className="rounded-full p-1 text-3xl text-[var(--accent)]">
+                        <FaCompass className="text-lg text-orange-500" />
                     </div>
 
                     <span
-                        className={`font-libertinus text-2xl font-extrabold ${scrolled ? "text-[var(--card-foreground)]" : "text-white"
+                        className={`font-libertinus text-2xl font-extrabold text-[var(--card-foreground)] 
                             }`}
                     >
                         Traveller
@@ -62,7 +63,7 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <ul
-                    className={`hidden md:flex items-center gap-8 ${scrolled ? "text-[var(--card-foreground)]" : "text-white"
+                    className={`hidden md:flex items-center gap-8 text-[var(--card-foreground)] 
                         }`}
                 >
                     {menuItems.map((item) => (
@@ -127,7 +128,7 @@ const Navbar = () => {
                                         href="/login"
                                         className={`flex w-full items-center justify-center rounded-full px-4 py-1 font-semibold transition-all duration-300 active:scale-95 ${scrolled
                                             ? "border border-gray-700 bg-gray-700 text-white hover:border-gray-700 hover:bg-white hover:text-gray-700"
-                                            : "border border-white/40 text-white hover:bg-white hover:text-black hover:shadow-lg"
+                                            : "border border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white hover:shadow-lg"
                                             }`}
                                     >
                                         Login

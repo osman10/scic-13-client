@@ -1,0 +1,643 @@
+Give me 50 dummy data with valid image url in JSON format from the following data structure. 
+[{
+    "country": "Indonesia",
+    "catagory" : "Culture",
+    "image": "url",
+    "rating" : 4.5,
+    "title": "Ubud Balinese Cooking Class",
+    "subTitle": "Market to table with a village family.",
+    "experience":"Shop the morning market, harvest herbs from the garden, and cook a full Balinese feast in a family compound overlooking rice fields.",
+    "price": 19
+}]
+Here country will be any one of the following: Indonesia, Japan, Morocco, Argentina, Italy, Iceland, Kenya, Portugal, Vietnum.
+And catagory will be any one of the following:  Culture, Adventure, Foods, wildlife, wellness, City Break
+
+
+[
+  {
+    "country": "Indonesia",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/1/800/600",
+    "rating": 4.7,
+    "title": "Ubud Balinese Cooking Class",
+    "subTitle": "Market to table with a village family.",
+    "experience": "Shop local markets, gather fresh ingredients, and prepare authentic Balinese dishes with experienced home cooks.",
+    "price": 19
+  },
+  {
+    "country": "Japan",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/2/800/600",
+    "rating": 4.9,
+    "title": "Tokyo Sushi Workshop",
+    "subTitle": "Master sushi with a local chef.",
+    "experience": "Learn knife skills, prepare fresh sushi, and enjoy your creations in a traditional Tokyo kitchen.",
+    "price": 45
+  },
+  {
+    "country": "Morocco",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/3/800/600",
+    "rating": 4.6,
+    "title": "Sahara Desert Camel Trek",
+    "subTitle": "Ride across golden dunes.",
+    "experience": "Experience sunset camel rides, desert camping, and traditional Berber hospitality.",
+    "price": 75
+  },
+  {
+    "country": "Argentina",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/4/800/600",
+    "rating": 4.8,
+    "title": "Buenos Aires Tango Night",
+    "subTitle": "Dance like a local.",
+    "experience": "Take tango lessons before enjoying a live performance and authentic Argentine dinner.",
+    "price": 39
+  },
+  {
+    "country": "Italy",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/5/800/600",
+    "rating": 4.9,
+    "title": "Tuscan Pasta Making",
+    "subTitle": "Fresh pasta from scratch.",
+    "experience": "Learn family recipes while making handmade pasta and regional sauces.",
+    "price": 42
+  },
+  {
+    "country": "Iceland",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/6/800/600",
+    "rating": 4.8,
+    "title": "Glacier Hiking Tour",
+    "subTitle": "Explore icy landscapes.",
+    "experience": "Walk across ancient glaciers with expert guides and discover ice caves.",
+    "price": 95
+  },
+  {
+    "country": "Kenya",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/7/800/600",
+    "rating": 4.9,
+    "title": "Maasai Mara Safari",
+    "subTitle": "Witness Africa's wildlife.",
+    "experience": "Spot lions, elephants, giraffes, and more on a guided safari adventure.",
+    "price": 180
+  },
+  {
+    "country": "Portugal",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/8/800/600",
+    "rating": 4.5,
+    "title": "Lisbon Historic Walk",
+    "subTitle": "Discover colorful neighborhoods.",
+    "experience": "Visit iconic viewpoints, historic streets, and enjoy local pastries.",
+    "price": 22
+  },
+  {
+    "country": "Vietnum",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/9/800/600",
+    "rating": 4.7,
+    "title": "Hoi An Lantern Workshop",
+    "subTitle": "Craft your own lantern.",
+    "experience": "Learn traditional lantern-making techniques from local artisans.",
+    "price": 18
+  },
+  {
+    "country": "Japan",
+    "catagory": "Wellness",
+    "image": "https://picsum.photos/seed/10/800/600",
+    "rating": 4.8,
+    "title": "Hakone Onsen Escape",
+    "subTitle": "Relax in natural hot springs.",
+    "experience": "Enjoy therapeutic mineral baths surrounded by scenic mountain views.",
+    "price": 55
+  },
+  {
+    "country": "Indonesia",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/11/800/600",
+    "rating": 4.6,
+    "title": "Mount Batur Sunrise Trek",
+    "subTitle": "Hike before dawn.",
+    "experience": "Reach the summit for breathtaking sunrise views over Bali.",
+    "price": 28
+  },
+  {
+    "country": "Italy",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/12/800/600",
+    "rating": 4.7,
+    "title": "Rome Ancient Landmarks",
+    "subTitle": "Walk through history.",
+    "experience": "Explore famous monuments, hidden alleys, and charming piazzas.",
+    "price": 30
+  },
+  {
+    "country": "Morocco",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/13/800/600",
+    "rating": 4.6,
+    "title": "Marrakech Street Food Tour",
+    "subTitle": "Taste local favorites.",
+    "experience": "Sample tagines, pastries, and fresh juices in lively markets.",
+    "price": 27
+  },
+  {
+    "country": "Argentina",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/14/800/600",
+    "rating": 4.8,
+    "title": "Patagonia Hiking Experience",
+    "subTitle": "Adventure through wild landscapes.",
+    "experience": "Explore glaciers, lakes, and towering peaks with experienced guides.",
+    "price": 120
+  },
+  {
+    "country": "Kenya",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/15/800/600",
+    "rating": 4.5,
+    "title": "Maasai Village Visit",
+    "subTitle": "Discover local traditions.",
+    "experience": "Meet Maasai families and learn about their customs and daily life.",
+    "price": 35
+  },
+  {
+    "country": "Portugal",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/16/800/600",
+    "rating": 4.8,
+    "title": "Porto Wine & Tapas Tour",
+    "subTitle": "Taste regional flavors.",
+    "experience": "Visit wine cellars and sample Portuguese tapas with local wines.",
+    "price": 44
+  },
+  {
+    "country": "Iceland",
+    "catagory": "Wellness",
+    "image": "https://picsum.photos/seed/17/800/600",
+    "rating": 4.9,
+    "title": "Blue Lagoon Retreat",
+    "subTitle": "Recharge in geothermal waters.",
+    "experience": "Enjoy mineral-rich pools, spa treatments, and lava landscapes.",
+    "price": 89
+  },
+  {
+    "country": "Vietnum",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/18/800/600",
+    "rating": 4.7,
+    "title": "Hanoi Street Food Tour",
+    "subTitle": "Taste authentic Vietnamese cuisine.",
+    "experience": "Try pho, banh mi, egg coffee, and local desserts with a guide.",
+    "price": 24
+  },
+  {
+    "country": "Japan",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/19/800/600",
+    "rating": 4.8,
+    "title": "Kyoto Temple Walk",
+    "subTitle": "Explore timeless beauty.",
+    "experience": "Visit famous shrines, bamboo forests, and traditional tea houses.",
+    "price": 33
+  },
+  {
+    "country": "Italy",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/20/800/600",
+    "rating": 4.9,
+    "title": "Venice Gondola Experience",
+    "subTitle": "Cruise through canals.",
+    "experience": "Enjoy a peaceful gondola ride with stories about Venice's history.",
+    "price": 58
+  },
+  {
+    "country": "Indonesia",
+    "catagory": "Wellness",
+    "image": "https://picsum.photos/seed/21/800/600",
+    "rating": 4.7,
+    "title": "Bali Yoga Retreat",
+    "subTitle": "Restore mind and body.",
+    "experience": "Practice yoga, meditation, and wellness rituals in tropical surroundings.",
+    "price": 65
+  },
+  {
+    "country": "Morocco",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/22/800/600",
+    "rating": 4.6,
+    "title": "Fes Medina Tour",
+    "subTitle": "Step into history.",
+    "experience": "Explore ancient streets, artisan workshops, and colorful souks.",
+    "price": 29
+  },
+  {
+    "country": "Kenya",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/23/800/600",
+    "rating": 4.8,
+    "title": "Mount Kenya Trek",
+    "subTitle": "Climb Africa's second highest peak.",
+    "experience": "Enjoy alpine scenery and challenging hiking routes.",
+    "price": 140
+  },
+  {
+    "country": "Portugal",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/24/800/600",
+    "rating": 4.5,
+    "title": "Madeira Coastal Hike",
+    "subTitle": "Walk dramatic cliffs.",
+    "experience": "Discover waterfalls, forests, and breathtaking Atlantic views.",
+    "price": 48
+  },
+  {
+    "country": "Argentina",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/25/800/600",
+    "rating": 4.8,
+    "title": "Argentine BBQ Experience",
+    "subTitle": "Taste authentic asado.",
+    "experience": "Enjoy grilled meats, local wines, and traditional cooking techniques.",
+    "price": 46
+  },
+  {
+    "country": "Vietnum",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/26/800/600",
+    "rating": 4.7,
+    "title": "Ha Long Bay Cruise",
+    "subTitle": "Sail among limestone islands.",
+    "experience": "Kayak, swim, and explore hidden caves on a luxury cruise.",
+    "price": 78
+  },
+  {
+    "country": "Iceland",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/27/800/600",
+    "rating": 4.8,
+    "title": "Whale Watching Cruise",
+    "subTitle": "Meet gentle giants.",
+    "experience": "Search for whales, dolphins, and seabirds off Iceland's coast.",
+    "price": 72
+  },
+  {
+    "country": "Japan",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/28/800/600",
+    "rating": 4.9,
+    "title": "Tea Ceremony Experience",
+    "subTitle": "Traditional Japanese hospitality.",
+    "experience": "Learn tea etiquette and enjoy matcha in a historic tea house.",
+    "price": 32
+  },
+  {
+    "country": "Italy",
+    "catagory": "Wellness",
+    "image": "https://picsum.photos/seed/29/800/600",
+    "rating": 4.6,
+    "title": "Tuscan Spa Retreat",
+    "subTitle": "Relax in the countryside.",
+    "experience": "Enjoy thermal pools, massages, and vineyard views.",
+    "price": 98
+  },
+  {
+    "country": "Indonesia",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/30/800/600",
+    "rating": 4.7,
+    "title": "Komodo Island Adventure",
+    "subTitle": "See the famous dragons.",
+    "experience": "Visit Komodo National Park and snorkel crystal-clear waters.",
+    "price": 135
+  },
+  {
+    "country": "Morocco",
+    "catagory": "Wellness",
+    "image": "https://picsum.photos/seed/31/800/600",
+    "rating": 4.5,
+    "title": "Traditional Hammam Spa",
+    "subTitle": "Relax Moroccan style.",
+    "experience": "Enjoy steam baths, black soap scrubs, and massages.",
+    "price": 36
+  },
+  {
+    "country": "Portugal",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/32/800/600",
+    "rating": 4.8,
+    "title": "Fado Music Evening",
+    "subTitle": "Feel Portugal's soul.",
+    "experience": "Listen to live Fado while dining in a traditional restaurant.",
+    "price": 41
+  },
+  {
+    "country": "Kenya",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/33/800/600",
+    "rating": 4.9,
+    "title": "Amboseli Elephant Safari",
+    "subTitle": "See elephants beneath Kilimanjaro.",
+    "experience": "Photograph large elephant herds and diverse wildlife.",
+    "price": 165
+  },
+  {
+    "country": "Argentina",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/34/800/600",
+    "rating": 4.6,
+    "title": "Buenos Aires Highlights",
+    "subTitle": "Explore iconic neighborhoods.",
+    "experience": "Visit San Telmo, La Boca, and elegant Recoleta.",
+    "price": 26
+  },
+  {
+    "country": "Vietnum",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/35/800/600",
+    "rating": 4.7,
+    "title": "Ho Chi Minh City Tour",
+    "subTitle": "Modern meets history.",
+    "experience": "Visit bustling markets, museums, and rooftop viewpoints.",
+    "price": 23
+  },
+  {
+    "country": "Iceland",
+    "catagory": "Culture",
+    "image": "https://picsum.photos/seed/36/800/600",
+    "rating": 4.5,
+    "title": "Reykjavik Art Walk",
+    "subTitle": "Explore Nordic creativity.",
+    "experience": "Visit galleries, murals, and design studios with a local guide.",
+    "price": 27
+  },
+  {
+    "country": "Japan",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/37/800/600",
+    "rating": 4.8,
+    "title": "Mount Fuji Climb",
+    "subTitle": "Reach Japan's iconic summit.",
+    "experience": "Hike scenic trails and witness unforgettable sunrise views.",
+    "price": 88
+  },
+  {
+    "country": "Italy",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/38/800/600",
+    "rating": 4.7,
+    "title": "Dolomites Hiking Tour",
+    "subTitle": "Explore alpine beauty.",
+    "experience": "Walk scenic mountain trails and discover hidden lakes.",
+    "price": 99
+  },
+  {
+    "country": "Indonesia",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/39/800/600",
+    "rating": 4.6,
+    "title": "Jakarta City Explorer",
+    "subTitle": "Discover Indonesia's capital.",
+    "experience": "Visit museums, old town, and vibrant shopping districts.",
+    "price": 20
+  },
+  {
+    "country": "Portugal",
+    "catagory": "Wellness",
+    "image": "https://picsum.photos/seed/40/800/600",
+    "rating": 4.7,
+    "title": "Algarve Beach Yoga",
+    "subTitle": "Sunrise wellness sessions.",
+    "experience": "Practice yoga on golden beaches with ocean views.",
+    "price": 34
+  },
+  {
+    "country": "Kenya",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/41/800/600",
+    "rating": 4.5,
+    "title": "Nairobi Food Safari",
+    "subTitle": "Taste Kenyan cuisine.",
+    "experience": "Enjoy nyama choma, chapati, and local street delicacies.",
+    "price": 29
+  },
+  {
+    "country": "Morocco",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/42/800/600",
+    "rating": 4.6,
+    "title": "Casablanca Discovery Tour",
+    "subTitle": "Explore coastal charm.",
+    "experience": "Visit historic landmarks, markets, and seaside promenades.",
+    "price": 31
+  },
+  {
+    "country": "Argentina",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/43/800/600",
+    "rating": 4.8,
+    "title": "Penguin Colony Excursion",
+    "subTitle": "Meet Patagonian penguins.",
+    "experience": "Observe thousands of penguins in their natural habitat.",
+    "price": 92
+  },
+  {
+    "country": "Vietnum",
+    "catagory": "Wellness",
+    "image": "https://picsum.photos/seed/44/800/600",
+    "rating": 4.6,
+    "title": "Da Nang Spa Escape",
+    "subTitle": "Relax by the sea.",
+    "experience": "Enjoy massages, herbal treatments, and beachfront tranquility.",
+    "price": 40
+  },
+  {
+    "country": "Iceland",
+    "catagory": "City Break",
+    "image": "https://picsum.photos/seed/45/800/600",
+    "rating": 4.5,
+    "title": "Reykjavik City Explorer",
+    "subTitle": "Northern capital highlights.",
+    "experience": "Visit museums, cafes, and colorful streets in Iceland's capital.",
+    "price": 24
+  },
+  {
+    "country": "Japan",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/46/800/600",
+    "rating": 4.7,
+    "title": "Nara Deer Park Tour",
+    "subTitle": "Meet friendly deer.",
+    "experience": "Feed sacred deer while exploring historic temples and gardens.",
+    "price": 21
+  },
+  {
+    "country": "Italy",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/47/800/600",
+    "rating": 4.6,
+    "title": "Abruzzo Wildlife Walk",
+    "subTitle": "Explore Italy's national parks.",
+    "experience": "Look for wolves, bears, and native bird species with expert guides.",
+    "price": 68
+  },
+  {
+    "country": "Indonesia",
+    "catagory": "Foods",
+    "image": "https://picsum.photos/seed/48/800/600",
+    "rating": 4.8,
+    "title": "Jakarta Food Journey",
+    "subTitle": "Discover Indonesian flavors.",
+    "experience": "Taste satay, rendang, and traditional desserts across local markets.",
+    "price": 25
+  },
+  {
+    "country": "Portugal",
+    "catagory": "wildlife",
+    "image": "https://picsum.photos/seed/49/800/600",
+    "rating": 4.7,
+    "title": "Dolphin Watching Algarve",
+    "subTitle": "Cruise the Atlantic coast.",
+    "experience": "Spot playful dolphins and enjoy scenic coastal caves.",
+    "price": 54
+  },
+  {
+    "country": "Morocco",
+    "catagory": "Adventure",
+    "image": "https://picsum.photos/seed/50/800/600",
+    "rating": 4.8,
+    "title": "Atlas Mountains Trek",
+    "subTitle": "Hike breathtaking landscapes.",
+    "experience": "Explore Berber villages, mountain passes, and panoramic valleys.",
+    "price": 84
+  }
+]
+
+
+npm i react-rating-stars-component
+
+// React Rating component
+import ReactStars from "react-rating-stars-component";
+
+const firstExample = {
+  size: 20,
+  value: 4,
+  edit: false,
+};
+
+export default function App() {
+  return (
+    <div className="App">
+      
+      <ReactStars {...firstExample} />
+      
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Fade Example</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:white;
+}
+
+/* Hero Section */
+.hero{
+    height:500px;
+    background:url("https://picsum.photos/1600/900") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:48px;
+    font-weight:bold;
+}
+
+/* White Fade */
+.fade{
+    height:150px;
+    margin-top:-150px;
+    background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(255,255,255,1)
+    );
+}
+
+/* Content */
+.content{
+    padding:60px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+p{
+    margin-bottom:20px;
+}
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+    Hero Section
+</section>
+
+<div class="fade"></div>
+
+<section class="content">
+    <h2>Content Starts Here</h2>
+
+    <p>
+        This is the section below the hero. Notice how the image smoothly
+        fades into the white background instead of ending abruptly.
+    </p>
+
+    <p>
+        The gradient is created using a simple linear-gradient from
+        transparent to white, while the negative margin pulls it over the
+        bottom of the hero image.
+    </p>
+
+    <p>
+        Scroll down to see how natural the transition looks.
+    </p>
+</section>
+
+</body>
+</html>

@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { BsStars } from "react-icons/bs";
 import { FiPlayCircle } from "react-icons/fi";
 import { LuArrowRight } from "react-icons/lu";
 import { RiArrowDownWideLine } from "react-icons/ri";
 
-const container = {
+const container: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -17,7 +17,7 @@ const container = {
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: {
     opacity: 0,
     y: 40,
@@ -34,7 +34,7 @@ const item = {
 
 const Banner = () => {
   return (
-    <div className="relative w-full min-h-[80vh] overflow-hidden bg-[url('/images/mountain.jpg')] bg-cover bg-center">
+    <div className="relative min-h-[80vh] w-full overflow-hidden">
       {/* Background */}
       <motion.div
         initial={{ scale: 1.08 }}
@@ -42,13 +42,14 @@ const Banner = () => {
         transition={{ duration: 1.5 }}
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/travel-hero.jpg')",
+          backgroundImage: "url('/images/mountain.jpg')",
         }}
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
+      {/* Content */}
       <div className="relative z-10 container mx-auto flex min-h-[80vh] items-center px-6">
         <motion.div
           variants={container}
@@ -118,11 +119,9 @@ const Banner = () => {
           </motion.div>
         </motion.div>
       </div>
-      {/* Moving arrow */}
 
-
-
-      <div className="container mx-auto p-6 flex justify-center items-center h-10 text-3xl">
+      {/* Moving Arrow */}
+      <div className="absolute bottom-5 left-0 right-0 flex justify-center text-3xl text-white">
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{
@@ -134,8 +133,6 @@ const Banner = () => {
           <RiArrowDownWideLine />
         </motion.div>
       </div>
-
-
     </div>
   );
 };

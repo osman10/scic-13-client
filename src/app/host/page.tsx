@@ -1,9 +1,10 @@
+import PublishExperience from "@/components/PublishExperience";
 
 
 const page = () => {
     return (
         <div className="">
-            host
+            <PublishExperience/>
         </div>
     );
 };

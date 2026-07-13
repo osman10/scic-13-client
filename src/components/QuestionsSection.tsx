@@ -1,13 +1,20 @@
 "use client";
 
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { FaChevronDown, FaChevronUp, FaClock, FaEnvelope } from 'react-icons/fa';
+import Link from "next/link";
+import React, { useState } from "react";
+import { FaChevronDown, FaClock, FaEnvelope } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+
+interface Question {
+    id: number;
+    question: string;
+    answer: string;
+}
 
 const QuestionsSection = () => {
-    const [openQuestion, setOpenQuestion] = useState(null);
+    const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
-    const questions = [
+    const questions: Question[] = [
         {
             id: 1,
             question: "How are experiences vetted?",
@@ -30,82 +37,140 @@ const QuestionsSection = () => {
         }
     ];
 
-    const toggleQuestion = (id) => {
-        setOpenQuestion(openQuestion === id ? null : id);
+    const toggleQuestion = (id: number) => {
+        setOpenQuestion((prev) => (prev === id ? null : id));
     };
 
     return (
         <section className="bg-gray-50 py-16">
             <div className="container mx-auto px-4">
 
-                <div className='flex gap-10 flex-wrap lg:flex-nowrap p-4'>
-                    {/* Left side */}
-                    <div>
-                        {/* Header */}
+                <div className="flex gap-10 flex-col lg:flex-row p-4">
+
+                    {/* Left Side */}
+                    <motion.div
+                        className="w-full lg:w-1/3"
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <div className="flex flex-col items-start mb-10">
-                            <h2 className="text-3xl font-bold text-gray-800 tracking-wide">QUESTIONS</h2>
-                            <p className="text-xl font-semibold text-gray-700 mt-1">Before you go</p>
+                            <h2 className="text-3xl font-bold text-gray-800 tracking-wide">
+                                QUESTIONS
+                            </h2>
+
+                            <p className="text-xl font-semibold text-gray-700 mt-1">
+                                Before you go
+                            </p>
                         </div>
 
-                        {/* Contact Support Section */}
-                        <div className="flex mt-10 max-w-4xl">
-                            <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 gap-4">
-                                <div className="flex items-start gap-3 flex-1">
-                                    <div className="flex-shrink-0 mt-1">
-                                        <FaClock className="w-5 h-5 text-blue-600" />
-                                    </div>
-                                    <div className="flex-1">
-                                        <p className="text-sm text-gray-700">
-                                            <span className="font-medium">Can't find what you need?</span> Our team replies in under an hour, 7am-11pm local time.
-                                        </p>
-                                    </div>
-                                </div>
-                                <Link
-                                    href="/contact"
-                                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm whitespace-nowrap transition-colors duration-200 flex-shrink-0"
-                                >
-                                    <FaEnvelope className="w-4 h-4" />
-                                    Contact us →
-                                </Link>
+
+                        <motion.div
+                            whileHover={{ y: -5 }}
+                            transition={{ duration: 0.2 }}
+                            className="flex flex-col md:flex-row md:items-center md:justify-between w-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 gap-4"
+                        >
+                            <div className="flex items-start gap-3 flex-1">
+                                <FaClock className="w-5 h-5 text-blue-600 mt-1 shrink-0" />
+
+                                <p className="text-sm text-gray-700">
+                                    <span className="font-medium">
+                                        Can't find what you need?
+                                    </span>{" "}
+                                    Our team replies in under an hour, 7am-11pm local time.
+                                </p>
                             </div>
-                        </div>
-                    </div>
 
-                    {/* Right side Questions List */}
-                    <div className="flex flex-col space-y-4 max-w-4xl">
-                        {questions.map((q) => (
-                            <div
-                                key={q.id}
-                                className="flex flex-col bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-200 hover:shadow-md"
+                            <Link
+                                href="/contact"
+                                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm whitespace-nowrap"
                             >
+                                <FaEnvelope className="w-4 h-4" />
+                                Contact us →
+                            </Link>
+                        </motion.div>
+
+                    </motion.div>
+
+
+                    {/* Right Side */}
+                    <motion.div
+                        className="w-full lg:w-2/3 flex flex-col space-y-4"
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >
+
+                        {questions.map((q) => (
+                            <motion.div
+                                key={q.id}
+                                layout
+                                className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
+                                whileHover={{
+                                    boxShadow: "0px 8px 20px rgba(0,0,0,0.08)"
+                                }}
+                            >
+
                                 <button
                                     onClick={() => toggleQuestion(q.id)}
-                                    className="flex items-center justify-between w-full p-5 text-left hover:bg-gray-50 transition-colors duration-200"
+                                    className="flex items-center justify-between w-full p-5 text-left hover:bg-gray-50 transition-colors"
                                 >
                                     <span className="text-base font-medium text-gray-800 flex-1 pr-4">
                                         {q.question}
                                     </span>
-                                    <span className="text-gray-400 flex-shrink-0">
-                                        {openQuestion === q.id ? (
-                                            <FaChevronUp className="w-4 h-4" />
-                                        ) : (
-                                            <FaChevronDown className="w-4 h-4" />
-                                        )}
-                                    </span>
+
+
+                                    <motion.span
+                                        animate={{
+                                            rotate: openQuestion === q.id ? 180 : 0
+                                        }}
+                                        transition={{ duration: 0.25 }}
+                                        className="text-gray-400"
+                                    >
+                                        <FaChevronDown className="w-4 h-4" />
+                                    </motion.span>
+
                                 </button>
 
-                                {/* Answer - Expandable */}
-                                <div
-                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${openQuestion === q.id ? 'max-h-96 pb-5 px-5' : 'max-h-0'
-                                        }`}
-                                >
-                                    <p className="text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                                        {q.answer}
-                                    </p>
-                                </div>
-                            </div>
+
+                                <AnimatePresence initial={false}>
+                                    {openQuestion === q.id && (
+                                        <motion.div
+                                            key="content"
+                                            initial={{
+                                                height: 0,
+                                                opacity: 0
+                                            }}
+                                            animate={{
+                                                height: "auto",
+                                                opacity: 1
+                                            }}
+                                            exit={{
+                                                height: 0,
+                                                opacity: 0
+                                            }}
+                                            transition={{
+                                                duration: 0.35,
+                                                ease: "easeInOut"
+                                            }}
+                                            className="overflow-hidden"
+                                        >
+                                            <div className="px-5 pb-5">
+                                                <p className="text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                                                    {q.answer}
+                                                </p>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+
+                            </motion.div>
                         ))}
-                    </div>
+
+                    </motion.div>
+
                 </div>
 
             </div>

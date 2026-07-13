@@ -3,11 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { GiMountainCave } from "react-icons/gi";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
-import { LuLogOut } from "react-icons/lu";
 import { FaCompass } from "react-icons/fa6";
+import LogoutButton from "./LogoutButton";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
+
+
+
+
 
 const menuItems = [
     { label: "Home", href: "/" },
@@ -24,11 +29,24 @@ const loginMenuItems = [
 
 
 const Navbar = () => {
+     const { 
+        data: session, 
+        isPending, //loading state
+        error, //error object
+        refetch //refetch the session
+    } = authClient.useSession() 
+    // user name and image 
+    const imageUrl = session?.user.image;
+    const userName = session?.user.name;
+
+
+
+
     const pathname = usePathname();
 
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isLogedIn, setIsLogedIn] = useState(false)
+
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -77,7 +95,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
-                    {isLogedIn &&
+                    {session &&
                         loginMenuItems.map((item) => (
                             <li key={item.href}>
                                 <Link
@@ -96,20 +114,11 @@ const Navbar = () => {
                 {/* Desktop auth section */}
                 <div className="hidden md:flex">
                     <ul>
-                        {isLogedIn ?
+                        {session ?
                             <li className="w-full">
                                 <div className="flex items-center justify-center gap-4 px-6 mt-4">
-                                    <Link
-                                        href="/logout"
-                                        className={`flex w-full items-center justify-center rounded-lg px-4 py-2.5 font-semibold transition-all duration-300 active:scale-95 
-                                            ${scrolled
-                                                ? "border border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white"
-                                                : "border border-white text-white hover:bg-white hover:text-gray-600 hover:shadow-lg"
-                                            }`}
-                                    >
-                                        <LuLogOut className="mr-2" />
-                                        Logout
-                                    </Link>
+                                   <Image src={`${imageUrl}`} alt={`${userName}`} height={40} width={40} className="rounded-full border border-gray-500"/>
+                                   <LogoutButton/>
                                 </div>
                             </li>
 
@@ -177,7 +186,7 @@ const Navbar = () => {
                         </li>
                     ))}
 
-                    {isLogedIn &&
+                    {session &&
                         loginMenuItems.map((item) => (
                             <li key={item.href}>
                                 <Link
@@ -190,15 +199,10 @@ const Navbar = () => {
                             </li>
                         ))}
 
-                    {isLogedIn ?
+                    {session ?
                         <li className="w-full">
                             <div className="flex items-center justify-center gap-4 px-6 mt-4">
-                                <Link
-                                    href="/logout"
-                                    className="flex w-full items-center justify-center rounded-lg bg-red-500 py-2.5 font-semibold text-white transition-all duration-300 hover:bg-green-600 hover:shadow-lg active:scale-95"
-                                >
-                                    <LuLogOut />Logout
-                                </Link>
+                                <LogoutButton/>
                             </div>
                         </li>
 

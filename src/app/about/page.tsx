@@ -29,7 +29,7 @@ const page = () => {
         </div>
 
         <a
-          href="/experiences"
+          href="/explore"
           className="mt-12 inline-flex items-center gap-2 text-lg font-medium text-white transition hover:gap-3 bg-[var(--primary)] rounded-full px-4 py-2"
         >
           Explore experiences

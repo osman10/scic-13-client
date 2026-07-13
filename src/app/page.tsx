@@ -1,6 +1,8 @@
 import Banner from "@/components/Banner";
 import Featured from "@/components/Featured";
+import JournalSection from "@/components/JournalSection";
 import QuestionsSection from "@/components/QuestionsSection";
+import Testimonials from "@/components/Testimonials";
 import TravelStats from "@/components/TravelStats";
 
 
@@ -11,6 +13,8 @@ const page = () => {
       <TravelStats/>
       <Featured/>
       <QuestionsSection/>
+      <Testimonials/>
+      <JournalSection/>
     </div>
   );
 };

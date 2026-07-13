@@ -6,7 +6,14 @@ import { IoListSharp, IoSearchOutline } from 'react-icons/io5';
 import { FaGlobe, FaTag, FaSort } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
 
-const ClientPaginatedItems = ({ items, itemsPerPage = 6 }) => {
+
+
+type ClientPaginatedItemsProps = {
+    items: any[];
+    itemsPerPage?: number;
+};
+
+const ClientPaginatedItems = ({ items, itemsPerPage = 6, }: ClientPaginatedItemsProps) => {
     const [itemOffset, setItemOffset] = useState(0);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCountry, setSelectedCountry] = useState('All countries');
@@ -21,19 +28,19 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6 }) => {
     // Filter and sort items
     const filteredItems = items.filter(item => {
         const matchesSearch = item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             item.subTitle?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             item.experience?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             item.country?.toLowerCase().includes(searchTerm.toLowerCase());
-        
+            item.subTitle?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            item.experience?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            item.country?.toLowerCase().includes(searchTerm.toLowerCase());
+
         const matchesCountry = selectedCountry === 'All countries' || item.country === selectedCountry;
         const matchesCategory = selectedCategory === 'All categories' || item.catagory === selectedCategory;
-        
+
         return matchesSearch && matchesCountry && matchesCategory;
     });
 
     // Sort items
     const sortedItems = [...filteredItems].sort((a, b) => {
-        switch(sortBy) {
+        switch (sortBy) {
             case 'Price: Low to High':
                 return a.price - b.price;
             case 'Price: High to Low':
@@ -52,16 +59,23 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6 }) => {
     const currentItems = sortedItems.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(sortedItems.length / itemsPerPage);
 
+
     // Handle page click
-    const handlePageClick = (event) => {
+    // Handle page click
+    const handlePageClick = (event: { selected: number }) => {
         const newOffset = (event.selected * itemsPerPage) % sortedItems.length;
+
         setItemOffset(newOffset);
+
         // Scroll to top when page changes
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     };
 
-    // Reset pagination when filters change
-    const handleFilterChange = (callback) => {
+
+    const handleFilterChange = (callback: () => unknown) => {
         callback();
         setItemOffset(0);
     };
@@ -159,7 +173,7 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6 }) => {
                         {searchTerm && (
                             <span className="inline-flex items-center gap-1 text-sm bg-blue-50 text-blue-700 px-2 py-1 rounded-full">
                                 Search: "{searchTerm}"
-                                <button 
+                                <button
                                     onClick={() => handleFilterChange(() => setSearchTerm(''))}
                                     className="hover:text-blue-900"
                                 >
@@ -170,7 +184,7 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6 }) => {
                         {selectedCountry !== 'All countries' && (
                             <span className="inline-flex items-center gap-1 text-sm bg-green-50 text-green-700 px-2 py-1 rounded-full">
                                 {selectedCountry}
-                                <button 
+                                <button
                                     onClick={() => handleFilterChange(() => setSelectedCountry('All countries'))}
                                     className="hover:text-green-900"
                                 >
@@ -181,7 +195,7 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6 }) => {
                         {selectedCategory !== 'All categories' && (
                             <span className="inline-flex items-center gap-1 text-sm bg-purple-50 text-purple-700 px-2 py-1 rounded-full">
                                 {selectedCategory}
-                                <button 
+                                <button
                                     onClick={() => handleFilterChange(() => setSelectedCategory('All categories'))}
                                     className="hover:text-purple-900"
                                 >

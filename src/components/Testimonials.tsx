@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const testimonials = [
   {
@@ -31,7 +31,7 @@ const testimonials = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {
     opacity: 0,
   },
@@ -43,7 +43,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 50,
@@ -57,6 +57,7 @@ const cardVariants = {
     },
   },
 };
+
 
 const Testimonials = () => {
   return (

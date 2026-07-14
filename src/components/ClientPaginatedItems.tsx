@@ -19,6 +19,8 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6, }: ClientPaginatedItems
     const [selectedCountry, setSelectedCountry] = useState('All countries');
     const [selectedCategory, setSelectedCategory] = useState('All categories');
     const [sortBy, setSortBy] = useState('Newest');
+    
+    
 
     // Get unique countries and categories for filter dropdowns
     const countries = ['All countries', ...new Set(items.map(item => item.country))];
@@ -282,7 +284,7 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6, }: ClientPaginatedItems
                                         )}
                                     </div>
                                 </div>
-                                <Link href="#" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                                <Link href={`explore/${item._id}`} className="bg-[#154b4e]  hover:bg-orange-500 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                                     View Details
                                 </Link>
                             </div>
@@ -304,10 +306,10 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6, }: ClientPaginatedItems
                         previousLabel="< Previous"
                         renderOnZeroPageCount={null}
                         containerClassName="flex items-center gap-2 flex-wrap justify-center"
-                        pageClassName="px-3 py-2 rounded-md hover:bg-amber-600 transition-colors cursor-pointer bg-[#154b4e] text-white"
-                        activeClassName="bg-amber-600 text-white hover:bg-amber-600"
-                        previousClassName="px-3 py-2 rounded-md hover:bg-amber-600 transition-colors cursor-pointer bg-[#154b4e] text-white"
-                        nextClassName="px-3 py-2 rounded-md hover:bg-amber-600 transition-colors cursor-pointer bg-[#154b4e] text-white"
+                        pageClassName="px-3 py-2 rounded-md hover:bg-orange-500 transition-colors cursor-pointer bg-[#154b4e] text-white"
+                        activeClassName="bg-orange-500 text-white hover:bg-orange-500"
+                        previousClassName="px-3 py-2 rounded-md hover:bg-orange-500 transition-colors cursor-pointer bg-[#154b4e] text-white"
+                        nextClassName="px-3 py-2 rounded-md hover:bg-orange-500 transition-colors cursor-pointer bg-[#154b4e] text-white"
                         disabledClassName="opacity-50 cursor-not-allowed bg-[#8aa8aa] text-gray-200"
                         breakClassName="px-3 py-2 text-[#154b4e]"
                     />

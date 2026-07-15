@@ -13,7 +13,7 @@ type ClientPaginatedItemsProps = {
     itemsPerPage?: number;
 };
 
-const ClientPaginatedItems = ({ items, itemsPerPage = 6, }: ClientPaginatedItemsProps) => {
+const ClientPaginatedItems = ({ items, itemsPerPage = 8, }: ClientPaginatedItemsProps) => {
     const [itemOffset, setItemOffset] = useState(0);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCountry, setSelectedCountry] = useState('All countries');
@@ -215,7 +215,7 @@ const ClientPaginatedItems = ({ items, itemsPerPage = 6, }: ClientPaginatedItems
             </div>
 
             {/* Display items in a responsive grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {currentItems.map((item, index) => (
                     <div
                         key={item._id || index}

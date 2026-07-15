@@ -26,9 +26,13 @@ type Experience = {
 export default async function Page({ params }: PageProps) {
   const { id } = await params;
 
+ 
+
 const session = await auth.api.getSession({
   headers: await headers(),
 });
+
+ 
 
   if(!session){
     return(
@@ -41,9 +45,8 @@ const session = await auth.api.getSession({
   });
 
 
-
   const response = await fetch(
-    `${process.env.SERVER_URL}/experience/${id}`,
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/experience/${id}`,
     {
       method: "GET",
       headers: {
@@ -53,6 +56,7 @@ const session = await auth.api.getSession({
       cache: "no-store",
     }
   );
+
 
   if (!response.ok) {
     return (

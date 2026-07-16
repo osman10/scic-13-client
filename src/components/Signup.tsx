@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -55,24 +56,24 @@ const Signup = () => {
           email,
           password,
           image: imageUrl,
-          callbackURL: "/",
+          callbackURL: "/login",
         },
         {
           onSuccess: () => {
             setLoading(false);
-            alert("Signup Success");
+            toast.success("Signup Success");
           },
 
           onError: (ctx) => {
             setLoading(false);
-            alert(ctx.error?.message ?? "Signup failed");
+            toast.error(ctx.error?.message ?? "Signup failed");
           },
         }
       );
     } catch (error) {
       console.error(error);
       setLoading(false);
-      alert("Something went wrong");
+      toast.error("Something went wrong");
     }
   };
 

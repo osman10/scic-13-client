@@ -50,7 +50,7 @@ const Navbar = () => {
           : "bg-white/80"
       }`}
     >
-      <nav className="container mx-auto flex items-center justify-between px-6 py-4">
+      <nav className="container mx-auto flex items-center justify-between px-1 sm:px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <FaCompass className="text-xl text-orange-500" />
@@ -58,6 +58,8 @@ const Navbar = () => {
             Traveller
           </span>
         </Link>
+
+
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
@@ -124,6 +126,8 @@ const Navbar = () => {
             </div>
           )}
         </div>
+
+
 
         {/* Mobile Toggle */}
         <button

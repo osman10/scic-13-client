@@ -43,7 +43,7 @@ const TravelStats = () => {
               }}
               className="rounded-xl bg-white p-5 text-center shadow-lg"
             >
-              <h3 className="text-3xl font-extrabold text-[var(--primary)] sm:text-4xl">
+              <h3 className="text-xl  sm:text-3xl font-extrabold text-[var(--primary)] sm:text-4xl">
                 {inView && (
                   <CountUp
                     end={item.end}

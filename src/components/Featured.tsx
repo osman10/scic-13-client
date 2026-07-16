@@ -37,7 +37,7 @@ const Featured = () => {
                             This season's finest
                         </h2>
 
-                        <p className="mt-4 text-gray-600 leading-relaxed max-w-[350px]">
+                        <p className="mt-4 text-gray-600 leading-relaxed max-w-[3500px]">
                             A rotating selection curated by our regional editors — the
                             experiences we'd send our best friends on.
                         </p>
@@ -65,7 +65,7 @@ const Featured = () => {
 
 
                     <motion.div
-                        className="flex-1"
+                        className="hidden md:block flex-1"
                         initial={{ opacity: 0, x: 60, scale: 0.95 }}
                         whileInView={{ opacity: 1, x: 0, scale: 1 }}
                         transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
@@ -79,31 +79,31 @@ const Featured = () => {
                                 className="mySwiper"
                             >
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img1.png" alt="Img1" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img1.png" alt="Img1" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img2.png" alt="Img2" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img2.png" alt="Img2" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img3.png" alt="Img3" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img3.png" alt="Img3" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img4.png" alt="Img4" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img4.png" alt="Img4" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img5.png" alt="Img5" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img5.png" alt="Img5" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img6.png" alt="Img6" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img6.png" alt="Img6" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img7.png" alt="Img7" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img7.png" alt="Img7" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img8.png" alt="Img8" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img8.png" alt="Img8" height={350} width={300} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img9.png" alt="Img9" height={350} width={300} className="h-auto w-[350px]"/>
+                                    <Image src="/images/cards/img9.png" alt="Img9" height={350} width={300} />
                                 </SwiperSlide>
                             </Swiper>
                         </div>

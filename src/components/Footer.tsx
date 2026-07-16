@@ -5,6 +5,9 @@ import {
   FaYoutube,
   FaEnvelope,
   FaCompass,
+  FaGithub,
+  FaLinkedin,
+  FaPhone,
 } from "react-icons/fa6";
 
 const Footer = () => {
@@ -16,7 +19,7 @@ const Footer = () => {
           <div>
             <Link
               href="/"
-              className="font-libertinus mb-4 flex items-center gap-2 text-3xl text-[var(--accent)] font-bold text-stone-900"
+              className="font-libertinus mb-4 flex items-center gap-2 text-3xl font-bold text-stone-900"
             >
               <FaCompass className="text-lg text-orange-500" />
               Traveller
@@ -37,7 +40,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="/experiences" className="hover:text-stone-900">
-                  All experiences
+                  All Experiences
                 </Link>
               </li>
               <li>
@@ -67,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="hover:text-stone-900">
-                  About us
+                  About Us
                 </Link>
               </li>
               <li>
@@ -88,44 +91,55 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Reach Us */}
+          {/* Contact */}
           <div>
             <h3 className="mb-4 text-lg font-semibold text-stone-900">
-              Reach us
+              Contact
             </h3>
 
             <a
-              href="mailto:hello@voyagio.travel"
-              className="mb-4 flex items-center gap-2 hover:text-stone-900"
+              href="mailto:osman.mirpur55@gmail.com"
+              className="mb-3 flex items-center gap-2 hover:text-stone-900"
             >
               <FaEnvelope className="text-sm" />
-              hello@voyagio.travel
+              osman.mirpur55@gmail.com
             </a>
 
-            <p className="mb-6 text-stone-600">
-              Lisbon · Tokyo · Mexico City
-            </p>
+            <a
+              href="tel:+8801737290987"
+              className="mb-5 flex items-center gap-2 hover:text-stone-900"
+            >
+              <FaPhone className="text-sm" />
+              +88 01737-290987
+            </a>
 
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://github.com/osman10"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-300 transition hover:bg-stone-200"
               >
-                <FaInstagram />
+                <FaGithub />
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/osmanmirpur/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-300 transition hover:bg-stone-200"
               >
-                <FaXTwitter />
+                <FaLinkedin />
               </a>
 
               <a
-                href="#"
+                href="mailto:osman.mirpur55@gmail.com"
+                aria-label="Email"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-300 transition hover:bg-stone-200"
               >
-                <FaYoutube />
+                <FaEnvelope />
               </a>
             </div>
           </div>
@@ -134,7 +148,7 @@ const Footer = () => {
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-stone-300 pt-6 text-sm text-stone-500 md:flex-row">
           <p>© 2026 Traveller. All rights reserved.</p>
 
-          <p>Made with care in Lisbon.</p>
+          <p>Designed & Developed by Osman Mirpur.</p>
         </div>
       </div>
     </footer>

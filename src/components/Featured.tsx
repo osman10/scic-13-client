@@ -37,7 +37,7 @@ const Featured = () => {
                             This season's finest
                         </h2>
 
-                        <p className="mt-4 text-gray-600 leading-relaxed max-w-[500px]">
+                        <p className="mt-4 text-gray-600 leading-relaxed max-w-[350px]">
                             A rotating selection curated by our regional editors — the
                             experiences we'd send our best friends on.
                         </p>
@@ -79,31 +79,31 @@ const Featured = () => {
                                 className="mySwiper"
                             >
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img1.png" alt="Img1" height={350} width={400} />
+                                    <Image src="/images/cards/img1.png" alt="Img1" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img2.png" alt="Img2" height={350} width={400} />
+                                    <Image src="/images/cards/img2.png" alt="Img2" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img3.png" alt="Img3" height={350} width={400} />
+                                    <Image src="/images/cards/img3.png" alt="Img3" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img4.png" alt="Img4" height={350} width={400} />
+                                    <Image src="/images/cards/img4.png" alt="Img4" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img5.png" alt="Img5" height={350} width={400} />
+                                    <Image src="/images/cards/img5.png" alt="Img5" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img6.png" alt="Img6" height={350} width={400} />
+                                    <Image src="/images/cards/img6.png" alt="Img6" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img7.png" alt="Img7" height={350} width={400} />
+                                    <Image src="/images/cards/img7.png" alt="Img7" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img8.png" alt="Img8" height={350} width={400} />
+                                    <Image src="/images/cards/img8.png" alt="Img8" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Image src="/images/cards/img9.png" alt="Img9" height={350} width={400} />
+                                    <Image src="/images/cards/img9.png" alt="Img9" height={350} width={300} className="h-auto w-[350px]"/>
                                 </SwiperSlide>
                             </Swiper>
                         </div>
